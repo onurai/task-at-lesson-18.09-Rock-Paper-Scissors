@@ -14,7 +14,7 @@ namespace task_at_lesson_18._09_Rock__Paper__Scissors
             string CPUChoise;
             int cpuwin = 0;
             int youwin = 0;
-        begin:
+            begin:
             Console.WriteLine("Please Enter Your Choise (Rock, Paper, Scissors): ");
             string my_choise = Console.ReadLine();
             int choise = random.Next(1, 4);
@@ -30,28 +30,34 @@ namespace task_at_lesson_18._09_Rock__Paper__Scissors
                         }
                         else if (my_choise == "Scissors")
                         {
-                            Console.WriteLine("CPU WIN");
+                            Console.WriteLine("CPU WON");
                         }
                         else
                         {
                             Console.WriteLine("Equals");
                         }
+
                         cpuwin++;
                         youwin++;
                         if (cpuwin == 3)
-                        {
-                            Console.WriteLine("GAME OVER");
-                            Console.WriteLine();
-                            Console.WriteLine("{cpuwin}");
-                            Console.WriteLine("{youwin}");
-                        }
-                        else if (youwin == 3)
                         {
                             Console.WriteLine("GAME OVER");
                             Console.ReadKey();
                             Console.WriteLine("{cpuwin}");
                             Console.WriteLine("{youwin}");
                         }
+                        else 
+                        {
+                            if(youwin == 3)
+                            {
+                                Console.WriteLine("GAME OVER");
+                                Console.ReadKey();
+                                Console.WriteLine("{cpuwin}");
+                                Console.WriteLine("{youwin}");
+                            }
+                            
+                        }
+
                         Console.WriteLine("Would you like to carry on(yes or no): ");
                         string yesNO = Console.ReadLine();
                         if (yesNO.ToLower() == "yes")
@@ -80,6 +86,28 @@ namespace task_at_lesson_18._09_Rock__Paper__Scissors
                         {
                             Console.WriteLine("Equals");
                         }
+
+                        cpuwin++;
+                        youwin++;
+                        if (cpuwin == 3)
+                        {
+                            Console.WriteLine("GAME OVER");
+                            Console.ReadKey();
+                            Console.WriteLine("{cpuwin}");
+                            Console.WriteLine("{youwin}");
+                        }
+                        else
+                        {
+                            if (youwin == 3)
+                            {
+                                Console.WriteLine("GAME OVER");
+                                Console.ReadKey();
+                                Console.WriteLine("{cpuwin}");
+                                Console.WriteLine("{youwin}");
+                            }
+
+                        }
+                       
                         Console.WriteLine("Would you like to carry on(yes or no): ");
                         string b = Console.ReadLine();
                         if (b == "yes")
@@ -108,9 +136,31 @@ namespace task_at_lesson_18._09_Rock__Paper__Scissors
                         {
                             Console.WriteLine("Equals");
                         }
+
+                        cpuwin++;
+                        youwin++;
+                        if (cpuwin == 3)
+                        {
+                            Console.WriteLine("GAME OVER");
+                            Console.ReadKey();
+                            Console.WriteLine("{cpuwin}");
+                            Console.WriteLine("{youwin}");
+                        }
+                        else
+                        {
+                            if (youwin == 3)
+                            {
+                                Console.WriteLine("GAME OVER");
+                                Console.ReadKey();
+                                Console.WriteLine("{cpuwin}");
+                                Console.WriteLine("{youwin}");
+                            }
+
+                        }
+
                         Console.WriteLine("Would you like to carry on(yes or no): ");
-                        string c = Console.ReadLine();
-                        if (c == "yes")
+                        string NOyes = Console.ReadLine();
+                        if (NOyes.ToLower() == "yes")
                         {
                             goto begin;
                         }
